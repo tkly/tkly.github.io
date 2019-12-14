@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="计算机网络,面试," />
 
 
 
@@ -79,25 +79,16 @@
 
 
 
-<meta name="description" content="书山有路勤为径，学海无涯苦作舟！         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background: #657b8">
-<meta property="og:type" content="website">
-<meta property="og:title" content="坚持每天看书，不断充实自己！">
-<meta property="og:url" content="https:&#x2F;&#x2F;tkly.github.io&#x2F;books&#x2F;index.html">
+<meta name="description" content="1、请详细介绍一下TCP的三次握手机制，为什么要三次握手？2、讲一讲SYN超时，泛洪攻击，以及解决策略3、详细介绍一下TCP的四次挥手机制，为什么要有TIME_WAIT状态，为什么需要四次挥手？服务器出现了大量CLOSE_WAIT状态如何解决？4、详细讲一下TCP的滑动窗口5、讲一下HTTP与HTTPS的区别6、讲一讲TCP和UDP各有什么特点，两者有什么区别7、在地址栏键入URL后，网络世界发生">
+<meta name="keywords" content="计算机网络,面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12道经典计算机网络面试题">
+<meta property="og:url" content="https:&#x2F;&#x2F;tkly.github.io&#x2F;2019&#x2F;12&#x2F;13&#x2F;12%E9%81%93%E7%BB%8F%E5%85%B8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="tkly&#39;s blog">
-<meta property="og:description" content="书山有路勤为径，学海无涯苦作舟！         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {     background: #657b8">
+<meta property="og:description" content="1、请详细介绍一下TCP的三次握手机制，为什么要三次握手？2、讲一讲SYN超时，泛洪攻击，以及解决策略3、详细介绍一下TCP的四次挥手机制，为什么要有TIME_WAIT状态，为什么需要四次挥手？服务器出现了大量CLOSE_WAIT状态如何解决？4、详细讲一下TCP的滑动窗口5、讲一下HTTP与HTTPS的区别6、讲一讲TCP和UDP各有什么特点，两者有什么区别7、在地址栏键入URL后，网络世界发生">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https:&#x2F;&#x2F;img1.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s29195878.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;img3.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s10307483.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;img1.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s29438897.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;img1.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s29825217.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;img1.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s6096698.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;img3.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s1613283.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;img3.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s2992671.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;img1.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s1943489.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;img9.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s27199116.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;img1.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s2996168.jpg">
+<meta property="og:updated_time" content="2019-12-13T15:35:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;img1.doubanio.com&#x2F;view&#x2F;subject&#x2F;m&#x2F;public&#x2F;s29195878.jpg">
 
 
 
@@ -127,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="https://tkly.github.io/books/"/>
+  <link rel="canonical" href="https://tkly.github.io/2019/12/13/12道经典计算机网络面试题/"/>
 
 
 
 
 
-  <title>坚持每天看书，不断充实自己！ | tkly's blog</title>
+  <title>12道经典计算机网络面试题 | tkly's blog</title>
   
 
 
@@ -312,464 +303,199 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tkly.github.io/2019/12/13/12%E9%81%93%E7%BB%8F%E5%85%B8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%9D%A2%E8%AF%95%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tkly">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tkly's blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">坚持每天看书，不断充实自己！</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <blockquote>
-    <p>书山有路勤为径，学海无涯苦作舟！</p>
-</blockquote>
+          <h1 class="post-title" itemprop="name headline">12道经典计算机网络面试题</h1>
+        
 
-<style>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-13T23:33:22+08:00">
+                2019-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机网络</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
     
-.hexo-douban-tabs {
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
 
-.hexo-douban-tab {
-    padding: 5px;
-}
-
-.hexo-douban-active {
-    background: #657b83;
-    color: #fff;
-}
-
-.hexo-douban-item {
-    padding-bottom: 10px;
-    position: relative;
-    clear: both;
-    min-height: 170px;
-    padding: 10px 0;
-    border-bottom: 1px #ddd solid;
-}
-
-@media screen and (max-width: 600px) {
-    .hexo-douban-item {
-        width: 100%;
-    }
-}
-
-.hexo-douban-picture {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 100px;
-}
-
-.hexo-douban-info {
-    padding-left: 120px;
-}
-
-.hexo-douban-meta {
-    font-size: 12px;
-    padding-right: 10px;
-}
-
-.hexo-douban-comments {
-    font-size: 12px;
-}
-
-.hexo-douban-pagination {
-    margin-top: 15px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.hexo-douban-button {
-    padding: 5px;
-}
-
-.hexo-douban-button:hover {
-    background: #657b83;
-    color: #fff;
-}
-
-.hexo-douban-hide {
-    display: none;
-}
-
-.hexo-douban-show {
-    display: block;
-}
-
-
-</style>
-
-<div class="hexo-douban-tabs">
-    <a class="hexo-douban-tab" id="hexo-douban-tab1" href="javascript:;"
-       rel="external">
-        在读
-        (3)</a>
-    <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;"
-       rel="external">
-        想读
-        (7)</a>
-    <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;"
-       rel="external">
-        已读
-        (0)</a>
-</div>
-<div>
-    <div id="hexo-douban-item1">
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s29195878.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/26912767/"> 深入理解计算机系统（原书第3版）</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  Randal E.Bryant、David O&#39;Hallaron / 龚奕利、贺莲 / 机械工业出版社 / 2016-11 / 139.00元
-
-        </div>
-        <div class="hexo-douban-meta">2019-12-14
-      在读 /  操作系统</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s10307483.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/10789789/"> C++ Primer Plus</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  Stephen Prata / 张海龙、袁国忠 / 人民邮电出版社 / 2012-6-19 / 99.00元
-
-        </div>
-        <div class="hexo-douban-meta">2019-12-13
-      在读 /  C++</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s29438897.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/26792521/"> C Primer Plus（第6版）中文版</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  普拉达 (Stephen Prata) / 姜佑 / 人民邮电出版社 / 2016-4-1 / CNY 89.00
-
-        </div>
-        <div class="hexo-douban-meta">2019-12-13
-      在读 /  C语言</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-pagination">
-    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;" target="_blank" rel="noopener"> 首页</a>
-    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;" target="_blank" rel="noopener">上一页</a>
-    <span class="hexo-douban-pagenum">2 / 3</span>
-    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;" target="_blank" rel="noopener">下一页</a>
-    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;" target="_blank" rel="noopener">尾页</a>
-</div>
-    </div>
-    <div id="hexo-douban-item2">
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s29825217.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/30280001/"> 计算机网络</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  James F. Kurose、Keith W. Ross / 陈鸣 / 机械工业出版社 / 2018-6 / 89
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        </div>
-        <div class="hexo-douban-meta">2019-12-13
-      想读 /  计算机网络</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s6096698.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/4118577/"> UNIX网络编程 卷2</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  W.Richard Stevens / 人民邮电出版社 / 2009-11 / 89.00元
+      
 
       
-        </div>
-        <div class="hexo-douban-meta">2019-12-13
-      想读 /  网络编程 Linux/Unix</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s1613283.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/1500149/"> UNIX网络编程</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  史蒂文斯、芬纳、鲁道夫 / 杨继张 / 清华大学出版社 / 2006-1 / 98.00元
-
+        <h4 id="1、请详细介绍一下TCP的三次握手机制，为什么要三次握手？"><a href="#1、请详细介绍一下TCP的三次握手机制，为什么要三次握手？" class="headerlink" title="1、请详细介绍一下TCP的三次握手机制，为什么要三次握手？"></a>1、请详细介绍一下TCP的三次握手机制，为什么要三次握手？</h4><h4 id="2、讲一讲SYN超时，泛洪攻击，以及解决策略"><a href="#2、讲一讲SYN超时，泛洪攻击，以及解决策略" class="headerlink" title="2、讲一讲SYN超时，泛洪攻击，以及解决策略"></a>2、讲一讲SYN超时，泛洪攻击，以及解决策略</h4><h4 id="3、详细介绍一下TCP的四次挥手机制，为什么要有TIME-WAIT状态，为什么需要四次挥手？服务器出现了大量CLOSE-WAIT状态如何解决？"><a href="#3、详细介绍一下TCP的四次挥手机制，为什么要有TIME-WAIT状态，为什么需要四次挥手？服务器出现了大量CLOSE-WAIT状态如何解决？" class="headerlink" title="3、详细介绍一下TCP的四次挥手机制，为什么要有TIME_WAIT状态，为什么需要四次挥手？服务器出现了大量CLOSE_WAIT状态如何解决？"></a>3、详细介绍一下TCP的四次挥手机制，为什么要有TIME_WAIT状态，为什么需要四次挥手？服务器出现了大量CLOSE_WAIT状态如何解决？</h4><h4 id="4、详细讲一下TCP的滑动窗口"><a href="#4、详细讲一下TCP的滑动窗口" class="headerlink" title="4、详细讲一下TCP的滑动窗口"></a>4、详细讲一下TCP的滑动窗口</h4><h4 id="5、讲一下HTTP与HTTPS的区别"><a href="#5、讲一下HTTP与HTTPS的区别" class="headerlink" title="5、讲一下HTTP与HTTPS的区别"></a>5、讲一下HTTP与HTTPS的区别</h4><h4 id="6、讲一讲TCP和UDP各有什么特点，两者有什么区别"><a href="#6、讲一讲TCP和UDP各有什么特点，两者有什么区别" class="headerlink" title="6、讲一讲TCP和UDP各有什么特点，两者有什么区别"></a>6、讲一讲TCP和UDP各有什么特点，两者有什么区别</h4><h4 id="7、在地址栏键入URL后，网络世界发生了什么？"><a href="#7、在地址栏键入URL后，网络世界发生了什么？" class="headerlink" title="7、在地址栏键入URL后，网络世界发生了什么？"></a>7、在地址栏键入URL后，网络世界发生了什么？</h4><h4 id="8、HTTP的常见状态码有哪些，代表什么含义？"><a href="#8、HTTP的常见状态码有哪些，代表什么含义？" class="headerlink" title="8、HTTP的常见状态码有哪些，代表什么含义？"></a>8、HTTP的常见状态码有哪些，代表什么含义？</h4><h4 id="9、GET请求和POST请求的区别"><a href="#9、GET请求和POST请求的区别" class="headerlink" title="9、GET请求和POST请求的区别"></a>9、GET请求和POST请求的区别</h4><h4 id="10、什么是Cookie-Cookie的使用过程是怎么样的？"><a href="#10、什么是Cookie-Cookie的使用过程是怎么样的？" class="headerlink" title="10、什么是Cookie, Cookie的使用过程是怎么样的？"></a>10、什么是Cookie, Cookie的使用过程是怎么样的？</h4><p>由于Http协议是无状态协议，如果客户通过浏览器访问web应用时没有一个保存用户访问状态的机制，那么将不能持续跟踪应用的操作。比如当用户往购物车中添加了商品，web应用必须在用户浏览别的商品的时候仍保存购物车的状态，以便用户继续往购物车中添加商品。</p>
+<p>cookie是浏览器的一种缓存机制，它可用于维持客户端与服务器端之间的会话。由于下面一题会讲到session，所以这里要强调cookie会将会话保存在客户端(session则是把会话保存在服务器端）</p>
+<p>这里以最常见的登录案例讲解cookie的使用过程：<br>1、首先用户在客户端浏览器向服务器发起登录请求<br>2、登录成功后，服务器会把登录的用户信息设置cookie中，返回给客户端浏览器<br>3、客户端浏览器接收到cookie请求后，会把cookie保存到本地（可能是内存，也可能是磁盘，看具体使用情况而定）<br>4、以后再次访问该web应用时，客户端浏览器就会把本地的cookie带上，这样服务器端就能根据cookie获得用户信息了</p>
+<h4 id="11、什么是session，有哪些实现session的机制？"><a href="#11、什么是session，有哪些实现session的机制？" class="headerlink" title="11、什么是session，有哪些实现session的机制？"></a>11、什么是session，有哪些实现session的机制？</h4><h4 id="12、session和cookie有什么区别"><a href="#12、session和cookie有什么区别" class="headerlink" title="12、session和cookie有什么区别"></a>12、session和cookie有什么区别</h4>
       
-        </div>
-        <div class="hexo-douban-meta">2019-12-13
-      想读 /  网络编程</div>
-        <div class="hexo-douban-comments">
-  </div>
     </div>
-</div>
+    
+    
+    
 
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s2992671.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/3004255/"> 编程之美</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  《编程之美》小组 编 / 电子工业出版社 / 2008-3 / 40.00元
+    
 
-      
-        </div>
-        <div class="hexo-douban-meta">2019-12-13
-      想读 /  编程之美</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s1943489.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/1102097/"> C陷阱与缺陷</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  Andrew Koenig / 高巍 / 人民邮电出版社 / 2003-12-1 / 30.00
-
-      
-        </div>
-        <div class="hexo-douban-meta">2019-12-13
-      想读 /  C语言</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img9.doubanio.com/view/subject/m/public/s27199116.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/25809330/"> Linux/UNIX系统编程手册</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  Michael Kerrisk / 孙剑 许从年 董健、孙余强 郭光伟 陈舸 / 人民邮电出版社 / 2014-1 / 158
-
-      
-        </div>
-        <div class="hexo-douban-meta">2019-12-13
-      想读 /  Linux/Unix</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-item">
-    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s2996168.jpg" referrerPolicy="no-referrer" /></div>
-    <div class="hexo-douban-info">
-        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/3012360/"> C和指针</a></div>
-        <div class="hexo-douban-meta">
-        
-  
-  Kenneth A.Reek / 徐波 / 人民邮电出版社 / 2008 年4月 / 65.00元
-
-      
-        </div>
-        <div class="hexo-douban-meta">2019-12-13
-      想读 /  C语言</div>
-        <div class="hexo-douban-comments">
-  </div>
-    </div>
-</div>
-
-        
-        <div class="hexo-douban-pagination">
-    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;" target="_blank" rel="noopener"> 首页</a>
-    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;" target="_blank" rel="noopener">上一页</a>
-    <span class="hexo-douban-pagenum">2 / 3</span>
-    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;" target="_blank" rel="noopener">下一页</a>
-    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;" target="_blank" rel="noopener">尾页</a>
-</div>
-
-    </div>
-    <div id="hexo-douban-item3">
-        
-        <div class="hexo-douban-pagination">
-    <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;" target="_blank" rel="noopener"> 首页</a>
-    <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;" target="_blank" rel="noopener">上一页</a>
-    <span class="hexo-douban-pagenum">2 / 3</span>
-    <a class="hexo-douban-button hexo-douban-nextpage" href="javascript:;" target="_blank" rel="noopener">下一页</a>
-    <a class="hexo-douban-button hexo-douban-lastpage" href="javascript:;" target="_blank" rel="noopener">尾页</a>
-</div>
-    </div>
-
-</div>
-
-<script>
-    /**
- * Created by myths on 18-2-8.
- */
-
-Element.prototype.siblings = function () {
-    var siblingElement = [];
-    var sibs = this.parentNode.children;
-    for (var i = 0; i < sibs.length; i++) {
-        if (sibs[i] !== this) {
-            siblingElement.push(sibs[i]);
-        }
-    }
-    return siblingElement;
-};
-function tabClick() {
-    //修改标签样式
-    this.classList.add('hexo-douban-active');
-    var sibs = this.siblings();
-    for (var j = 0; j < sibs.length; j++) {
-        sibs[j].classList.remove('hexo-douban-active');
-    }
-    //显示对应板块
-    var itemId = this.id.replace('tab', 'item');
-    var target = document.getElementById(itemId);
-    target.classList.remove('hexo-douban-hide');
-    target.classList.add('hexo-douban-show');
-    sibs = document.getElementById(itemId).siblings();
-    for (var k = 0; k < sibs.length; k++) {
-        sibs[k].classList.remove('hexo-douban-show');
-        sibs[k].classList.add('hexo-douban-hide');
-    }
-}
-var tabs = document.getElementsByClassName("hexo-douban-tab");
-for (var i = 0; i < tabs.length; i++) {
-    tabs[i].onclick = tabClick;
-    tabs[i].onclick.apply(tabs[i]);
-}
-tabs[2].click();
-
-    var firstpages = document.getElementsByClassName("hexo-douban-firstpage");
-var previouspages = document.getElementsByClassName("hexo-douban-previouspage");
-var nextpages = document.getElementsByClassName("hexo-douban-nextpage");
-var lastpages = document.getElementsByClassName("hexo-douban-lastpage");
-var pagenums = document.getElementsByClassName("hexo-douban-pagenum");
-
-function makePageNum(num, arr) {
-    return (num + 1) + ' / ' + (Math.ceil(arr.length / 10 === 0 ? 1 : Math.ceil(arr.length / 10)));
-}
-
-function firstBtn() {
-    var sibs = this.parentNode.siblings();
-    displayPage(sibs, 0);
-    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(0, sibs);
-}
-
-function previousBtn() {
-    var sibs = this.parentNode.siblings();
-    var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
-    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
-    currNum = parseInt(currNum, 10) - 1;
-    if (currNum > 0) {
-        currNum--;
-    }
-    displayPage(sibs, currNum);
-    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
-}
-
-function nextBtn() {
-    var sibs = this.parentNode.siblings();
-    var currNum = this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText;
-    currNum = currNum.substr(0, currNum.indexOf('/') - 1);
-    currNum = parseInt(currNum, 10) - 1;
-    if (currNum < Math.ceil(sibs.length / 10) - 1) {
-        currNum++;
-    }
-    displayPage(sibs, currNum);
-    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(currNum, sibs);
-}
-
-function lastBtn() {
-    var sibs = this.parentNode.siblings();
-    displayPage(sibs, Math.ceil(sibs.length / 10) - 1);
-    this.parentNode.getElementsByClassName('hexo-douban-pagenum')[0].innerText = makePageNum(Math.ceil(sibs.length / 10) - 1 === -1 ? 0 : Math.ceil(sibs.length / 10) - 1, sibs);
-}
-
-function displayPage(arr, num) {
-    for (var i = 0; i < arr.length; i++) {
-        if (Math.floor(i / 10) === num) {
-            arr[i].classList.remove('hexo-douban-hide');
-            var img = arr[i].getElementsByTagName('img')[0];
-            img.src = img.getAttribute('data-src');
-        } else {
-            arr[i].classList.add('hexo-douban-hide');
-        }
-    }
-}
-
-for (var i = 0; i < firstpages.length; i++) {
-
-    //add listener
-    firstpages[i].onclick = firstBtn;
-    previouspages[i].onclick = previousBtn;
-    nextpages[i].onclick = nextBtn;
-    lastpages[i].onclick = lastBtn;
-
-    //set page num
-    var size = pagenums[i].parentNode.siblings().length;
-    pagenums[i].innerText = '1 / ' + (Math.ceil(size / 10) === 0 ? 1 : Math.ceil(size / 10));
-    firstpages[i].click();
-}
-
-</script>
-
-
-        
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="tkly 微信支付"/>
+        <p>微信支付</p>
       </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="tkly 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"># 计算机网络</a>
+          
+            <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"># 面试</a>
+          
+        </div>
+      
+
       
       
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/13/WebRTC%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" rel="next" title="WebRTC源码分析">
+                <i class="fa fa-chevron-left"></i> WebRTC源码分析
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
       
     </div>
-    
-    
-    
   </div>
 
 
@@ -778,6 +504,10 @@ for (var i = 0; i < firstpages.length; i++) {
 
 
           
+
+  
+
+
 
         </div>
         
@@ -798,8 +528,17 @@ for (var i = 0; i < firstpages.length; i++) {
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -859,6 +598,22 @@ for (var i = 0; i < firstpages.length; i++) {
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、请详细介绍一下TCP的三次握手机制，为什么要三次握手？"><span class="nav-number">1.</span> <span class="nav-text">1、请详细介绍一下TCP的三次握手机制，为什么要三次握手？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、讲一讲SYN超时，泛洪攻击，以及解决策略"><span class="nav-number">2.</span> <span class="nav-text">2、讲一讲SYN超时，泛洪攻击，以及解决策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、详细介绍一下TCP的四次挥手机制，为什么要有TIME-WAIT状态，为什么需要四次挥手？服务器出现了大量CLOSE-WAIT状态如何解决？"><span class="nav-number">3.</span> <span class="nav-text">3、详细介绍一下TCP的四次挥手机制，为什么要有TIME_WAIT状态，为什么需要四次挥手？服务器出现了大量CLOSE_WAIT状态如何解决？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、详细讲一下TCP的滑动窗口"><span class="nav-number">4.</span> <span class="nav-text">4、详细讲一下TCP的滑动窗口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5、讲一下HTTP与HTTPS的区别"><span class="nav-number">5.</span> <span class="nav-text">5、讲一下HTTP与HTTPS的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6、讲一讲TCP和UDP各有什么特点，两者有什么区别"><span class="nav-number">6.</span> <span class="nav-text">6、讲一讲TCP和UDP各有什么特点，两者有什么区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7、在地址栏键入URL后，网络世界发生了什么？"><span class="nav-number">7.</span> <span class="nav-text">7、在地址栏键入URL后，网络世界发生了什么？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8、HTTP的常见状态码有哪些，代表什么含义？"><span class="nav-number">8.</span> <span class="nav-text">8、HTTP的常见状态码有哪些，代表什么含义？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9、GET请求和POST请求的区别"><span class="nav-number">9.</span> <span class="nav-text">9、GET请求和POST请求的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10、什么是Cookie-Cookie的使用过程是怎么样的？"><span class="nav-number">10.</span> <span class="nav-text">10、什么是Cookie, Cookie的使用过程是怎么样的？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11、什么是session，有哪些实现session的机制？"><span class="nav-number">11.</span> <span class="nav-text">11、什么是session，有哪些实现session的机制？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12、session和cookie有什么区别"><span class="nav-number">12.</span> <span class="nav-text">12、session和cookie有什么区别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
