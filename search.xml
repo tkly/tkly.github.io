@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>jsoncpp新老接口对比</title>
+    <url>/2019/12/20/jsoncpp%E6%96%B0%E8%80%81%E6%8E%A5%E5%8F%A3%E5%AF%B9%E6%AF%94/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>json</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git避坑指南</title>
     <url>/2019/12/19/Git%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<h4 id="1、断点续传"><a href="#1、断点续传" class="headerlink" title="1、断点续传"></a>1、断点续传</h4><p>直接使用git clone ***  是无法实现断点续传的，大点的文件很容易出现fatal: early EOF，如何实现断电续传呢？<br>下面以cJSON为例，作以说明：</p>
