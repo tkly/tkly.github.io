@@ -407,10 +407,9 @@
       
         
           
-          1、断点续传
-直接使用git clone ***  是无法实现断点续传的，大点的文件很容易出现fatal: early EOF，如何实现断电续传呢？下面以cJSON为例，作以说明：
+          1、断点续传直接使用git clone ***  是无法实现断点续传的，大点的文件很容易出现fatal: early EOF，如何实现断电续传呢？下面以cJSON为例，作以说明：
 【方案1】
-1$ mkdir cJSON2$ cd cJSON3$ git init4$ git fetch http
+1$ mkdir cJSON2$ cd cJSON3$ git init4$ git fetch https
           ...
           <!--noindex-->
           <div class="post-button text-center">
