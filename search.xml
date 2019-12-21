@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>VIM提高开发效率</title>
+    <url>/2019/12/21/VIM%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/</url>
+    <content><![CDATA[<p><strong>1、VIM连续多行缩进</strong><br>normal模式下<br>1)、选中行<br><code>shfit+v</code>启动选中状态，通过方向键控制选中行数<br>2)、缩进<br>使用<code>==</code>进行缩进，经测试，应该一次缩进n个Tab<br>使用<code>&gt;</code>向右缩进一个Tab<br>使用<code>&lt;</code>向左缩进一个Tab</p>
+]]></content>
+      <tags>
+        <tag>VIM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>jsoncpp新老接口对比</title>
     <url>/2019/12/20/jsoncpp%E6%96%B0%E8%80%81%E6%8E%A5%E5%8F%A3%E5%AF%B9%E6%AF%94/</url>
     <content><![CDATA[]]></content>
