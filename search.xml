@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++ STL 之 map</title>
+    <url>/2019/12/29/map/</url>
+    <content><![CDATA[<h1 id="C-STL之map"><a href="#C-STL之map" class="headerlink" title="C++  STL之map"></a>C++  STL之map</h1><hr>
+<blockquote>
+<p>map一定使用底层RB-tree的insert_unique()而非insert_equal()<br>multimap才使用insert_equal()<br>因为map不容许相同键值存在，multimap才允许相同键值存在<br>头文件　<code>#include &lt;map&gt;</code></p>
+</blockquote>
+<h4 id="二、插入数据"><a href="#二、插入数据" class="headerlink" title="二、插入数据"></a><strong>二、插入数据</strong></h4><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; mapInt;</span></pre></td></tr></table></figure>
+<p><strong>1、insert插入pair&lt;&gt;数据</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">mapInt.insert(pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;(<span class="number">1</span>,<span class="number">13</span>));</span></pre></td></tr></table></figure>
+<p><strong>2、insert插入map&lt;&gt;::value_type数据</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">mapInt.insert(<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;::value_type(<span class="number">2</span>,<span class="number">9</span>));</span></pre></td></tr></table></figure>
+<p><strong>3、insert插入make_pair数据</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">mapInt.insert(make_pair(<span class="number">3</span>, <span class="number">99</span>);</span></pre></td></tr></table></figure>
+<p><strong>4、下标方式插入</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">mapInt[<span class="number">4</span>] = <span class="number">23</span>;</span></pre></td></tr></table></figure>
+
+
+<h4 id="三、遍历"><a href="#三、遍历" class="headerlink" title="三、遍历"></a><strong>三、遍历</strong></h4><p><strong>1、迭代器for循环</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;::iterator it =mapInt.begin(); it != mapInt.end(); ++it)</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"["</span> &lt;&lt; it.first &lt;&lt; <span class="string">"]="</span> &lt;&lt; it.second &lt;&lt; <span class="built_in">endl</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p><strong>2、for_each()循环</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 定义函数指针</span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">(<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;::value_type <span class="keyword">const</span> &amp;value)</span></span></span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"["</span> &lt;&lt; value.first &lt;&lt; <span class="string">"]="</span> &lt;&lt; value.second &lt;&lt; <span class="built_in">endl</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">// 执行for_each()</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">for_each(mapInt.begin(), mapInt.end(), display);</span></pre></td></tr></table></figure>
+<p><strong>3、auto迭代器写法(C++11)</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> it = mapInt.begin(); it != mapInt.end(); ++it)</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">     <span class="built_in">cout</span> &lt;&lt; <span class="string">"["</span> &lt;&lt; it.first &lt;&lt; <span class="string">"]="</span> &lt;&lt; i</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p><strong>4、for-loop-scope迭代器写法(C++11)</strong></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> p : mapInt)</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"["</span> &lt;&lt; p.first &lt;&lt; <span class="string">"]="</span> &lt;&lt; p.second &lt;&lt; <span class="built_in">endl</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p><strong>5、for_each()与lamdba表达式(C++11)</strong></p>
+<p><strong>【注意】</strong><br>使用for_each()需要包含头文件<code>#include &lt;algorithm&gt;</code></p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">for_each(mapInt.begin(); mapInt.end();<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;::value_type &amp;p)</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"["</span> &lt;&lt; p.first &lt;&lt; <span class="string">"]="</span> &lt;&lt; p.second &lt;&lt; <span class="built_in">endl</span>;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+        <tag>STL</tag>
+        <tag>map</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VIM提高开发效率</title>
     <url>/2019/12/21/VIM%E6%8F%90%E9%AB%98%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/</url>
     <content><![CDATA[<p><strong>1、VIM连续多行缩进</strong><br>normal模式下<br>1)、选中行<br><code>shfit+v</code>启动选中状态，通过方向键控制选中行数<br>2)、缩进<br>使用<code>==</code>进行缩进，经测试，应该一次缩进n个Tab<br>使用<code>&gt;</code>向右缩进一个Tab<br>使用<code>&lt;</code>向左缩进一个Tab</p>
